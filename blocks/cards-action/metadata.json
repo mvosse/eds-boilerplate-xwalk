@@ -1,0 +1,39 @@
+{
+  "variantName": "cards-action",
+  "baseBlock": "cards",
+  "version": "1.0.0",
+  "created": "2026-05-19T20:10:00.000Z",
+  "sourceContext": {
+    "originUrl": "https://co.my.xcelenergy.com/s/",
+    "originPage": "Xcel Energy Colorado Homepage",
+    "blockPosition": "top"
+  },
+  "visualCharacteristics": {
+    "colorScheme": "dark",
+    "density": "compact",
+    "purpose": "quick-actions",
+    "imagePattern": "noimg"
+  },
+  "contentPattern": {
+    "structure": "heading + 4 action buttons",
+    "buttonCount": 4,
+    "imageCount": 0
+  },
+  "reuseGuidance": {
+    "suitableFor": [
+      "quick-action navigation banners",
+      "call-to-action button grids without images",
+      "utility navigation sections with dark backgrounds"
+    ],
+    "notSuitableFor": [
+      "content cards with images and descriptions",
+      "feature showcase cards",
+      "article or blog cards"
+    ]
+  },
+  "usage": {
+    "pagesUsing": ["/s/index"],
+    "reuseCount": 1,
+    "lastUsed": "2026-05-19T20:10:00.000Z"
+  }
+}

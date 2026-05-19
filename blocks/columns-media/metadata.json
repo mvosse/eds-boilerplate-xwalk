@@ -1,0 +1,39 @@
+{
+  "variantName": "columns-media",
+  "baseBlock": "columns",
+  "version": "1.0.0",
+  "created": "2026-05-19T20:10:00.000Z",
+  "sourceContext": {
+    "originUrl": "https://co.my.xcelenergy.com/s/",
+    "originPage": "Xcel Energy Colorado Homepage",
+    "blockPosition": "middle"
+  },
+  "visualCharacteristics": {
+    "colorScheme": "light",
+    "density": "spacious",
+    "purpose": "media-text",
+    "imagePattern": "large"
+  },
+  "contentPattern": {
+    "structure": "image + heading + paragraph + CTA",
+    "buttonCount": 1,
+    "imageCount": 1
+  },
+  "reuseGuidance": {
+    "suitableFor": [
+      "image and text side-by-side layouts",
+      "feature highlight sections with photo",
+      "product or service descriptions with accompanying image"
+    ],
+    "notSuitableFor": [
+      "text-only side-by-side layouts",
+      "video embed layouts",
+      "CTA-only banner layouts"
+    ]
+  },
+  "usage": {
+    "pagesUsing": ["/s/index"],
+    "reuseCount": 1,
+    "lastUsed": "2026-05-19T20:10:00.000Z"
+  }
+}

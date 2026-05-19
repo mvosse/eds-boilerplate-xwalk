@@ -1,0 +1,23 @@
+{
+  "status": "success",
+  "url": "https://co.my.xcelenergy.com/s/",
+  "path": "s",
+  "timestamp": "2026-05-19T20:34:14.104Z",
+  "title": "Home | Xcel Energy | Official Site",
+  "template": "portal-homepage",
+  "blocks": [
+    "hero-banner",
+    "hero-banner",
+    "cards-action",
+    "columns-media",
+    "columns-media",
+    "cards-featured",
+    "cards-featured",
+    "cards-featured",
+    "cards-horizontal",
+    "cards-horizontal",
+    "cards-horizontal",
+    "columns-video",
+    "columns-cta"
+  ]
+}

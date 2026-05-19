@@ -1,0 +1,124 @@
+{
+  "metadata": {
+    "projectType": "xwalk"
+  },
+  "templates": [
+    {
+      "name": "portal-homepage",
+      "urls": ["https://co.my.xcelenergy.com/s/"],
+      "description": "Xcel Energy customer portal homepage with account management and energy services",
+      "blocks": [
+        {
+          "name": "hero-banner",
+          "instances": ["c-xeg-hero-v2"]
+        },
+        {
+          "name": "cards-action",
+          "instances": ["c-xeg-multi-action-banner"]
+        },
+        {
+          "name": "columns-media",
+          "instances": ["c-xeg-two-column-v2"]
+        },
+        {
+          "name": "cards-featured",
+          "instances": ["c-xeg-featured-content-v2:nth-of-type(1)", "c-xeg-featured-content-v2:nth-of-type(3)"]
+        },
+        {
+          "name": "cards-horizontal",
+          "instances": ["c-xeg-featured-content-v2"]
+        },
+        {
+          "name": "columns-video",
+          "instances": ["c-dc-video-component-v2"]
+        },
+        {
+          "name": "columns-cta",
+          "instances": ["c-xeg-contact-support"]
+        }
+      ],
+      "sections": [
+        {
+          "id": "section-1",
+          "name": "Hero",
+          "selector": "c-xeg-hero-v2:first-of-type",
+          "style": null,
+          "blocks": ["hero-banner"],
+          "defaultContent": []
+        },
+        {
+          "id": "section-2",
+          "name": "Quick Actions",
+          "selector": "c-xeg-multi-action-banner",
+          "style": null,
+          "blocks": ["cards-action"],
+          "defaultContent": []
+        },
+        {
+          "id": "section-3",
+          "name": "Convenient Energy",
+          "selector": "c-xeg-two-column-v2:first-of-type",
+          "style": null,
+          "blocks": ["columns-media"],
+          "defaultContent": []
+        },
+        {
+          "id": "section-4",
+          "name": "Affordable Energy",
+          "selector": "c-xeg-featured-content-v2:nth-of-type(1)",
+          "style": null,
+          "blocks": ["cards-featured"],
+          "defaultContent": ["c-xeg-featured-content-v2:nth-of-type(1) h2", "c-xeg-featured-content-v2:nth-of-type(1) > section > div > p"]
+        },
+        {
+          "id": "section-5",
+          "name": "Personalized Energy",
+          "selector": "c-xeg-featured-content-v2:nth-of-type(2)",
+          "style": null,
+          "blocks": ["cards-horizontal"],
+          "defaultContent": ["c-xeg-featured-content-v2:nth-of-type(2) h2", "c-xeg-featured-content-v2:nth-of-type(2) > section > div > p"]
+        },
+        {
+          "id": "section-6",
+          "name": "Safer Energy",
+          "selector": "c-xeg-two-column-v2:nth-of-type(2)",
+          "style": null,
+          "blocks": ["columns-media"],
+          "defaultContent": []
+        },
+        {
+          "id": "section-7",
+          "name": "Local Energy",
+          "selector": "c-dc-video-component-v2",
+          "style": null,
+          "blocks": ["columns-video"],
+          "defaultContent": []
+        },
+        {
+          "id": "section-8",
+          "name": "Cleaner Energy",
+          "selector": "c-xeg-featured-content-v2:nth-of-type(3)",
+          "style": null,
+          "blocks": ["cards-featured"],
+          "defaultContent": ["c-xeg-featured-content-v2:nth-of-type(3) h2", "c-xeg-featured-content-v2:nth-of-type(3) > section > div > p"]
+        },
+        {
+          "id": "section-9",
+          "name": "Sustainable Energy",
+          "selector": "c-xeg-hero-v2:nth-of-type(2)",
+          "style": null,
+          "blocks": ["hero-banner"],
+          "defaultContent": []
+        },
+        {
+          "id": "section-10",
+          "name": "Contact CTA",
+          "selector": "c-xeg-contact-support",
+          "style": "dark-maroon",
+          "blocks": ["columns-cta"],
+          "defaultContent": []
+        }
+      ]
+    }
+  ]
+}

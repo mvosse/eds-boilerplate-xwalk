@@ -1,0 +1,39 @@
+{
+  "variantName": "cards-horizontal",
+  "baseBlock": "cards",
+  "version": "1.0.0",
+  "created": "2026-05-19T20:10:00.000Z",
+  "sourceContext": {
+    "originUrl": "https://co.my.xcelenergy.com/s/",
+    "originPage": "Xcel Energy Colorado Homepage",
+    "blockPosition": "middle"
+  },
+  "visualCharacteristics": {
+    "colorScheme": "light",
+    "density": "compact",
+    "purpose": "resource-listing",
+    "imagePattern": "icon"
+  },
+  "contentPattern": {
+    "structure": "icon + heading + description + CTA",
+    "buttonCount": 1,
+    "imageCount": 1
+  },
+  "reuseGuidance": {
+    "suitableFor": [
+      "resource or service listings with small icons",
+      "horizontal card layouts with icon on left",
+      "utility/tool navigation sections"
+    ],
+    "notSuitableFor": [
+      "cards with large featured images",
+      "vertical card layouts",
+      "action-only button grids"
+    ]
+  },
+  "usage": {
+    "pagesUsing": ["/s/index"],
+    "reuseCount": 1,
+    "lastUsed": "2026-05-19T20:10:00.000Z"
+  }
+}

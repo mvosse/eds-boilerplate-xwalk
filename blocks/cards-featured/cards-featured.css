@@ -1,0 +1,39 @@
+.cards-featured > div {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 32px;
+}
+
+.cards-featured > div > div {
+  display: flex;
+  flex-direction: column;
+}
+
+.cards-featured img {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  display: block;
+}
+
+.cards-featured h3 {
+  font-size: var(--heading-font-size-l);
+  font-weight: 700;
+  border-left: 4px solid var(--brand-red);
+  padding-left: 16px;
+  margin-top: 16px;
+}
+
+.cards-featured p {
+  font-size: var(--body-font-size-s);
+  line-height: 1.5;
+  color: var(--text-color);
+}
+
+.cards-featured a.button:any-link {
+  font-size: var(--body-font-size-m);
+  font-weight: 800;
+  text-transform: uppercase;
+  color: var(--text-color);
+  margin-top: auto;
+}

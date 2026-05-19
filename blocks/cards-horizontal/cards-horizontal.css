@@ -1,0 +1,50 @@
+.cards-horizontal > div {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 32px;
+}
+
+.cards-horizontal > div > div {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 16px;
+}
+
+.cards-horizontal > div > div > div:first-child {
+  flex-shrink: 0;
+  width: 64px;
+}
+
+.cards-horizontal > div > div > div:first-child img {
+  width: 64px;
+  height: 64px;
+  object-fit: contain;
+}
+
+.cards-horizontal h3 {
+  font-size: var(--heading-font-size-l);
+  font-weight: 700;
+  border-left: 4px solid var(--brand-red);
+  padding-left: 16px;
+  margin-top: 0;
+}
+
+.cards-horizontal p {
+  font-size: var(--body-font-size-s);
+  line-height: 1.5;
+  color: var(--text-color);
+}
+
+.cards-horizontal a.button:any-link {
+  font-size: var(--body-font-size-m);
+  font-weight: 800;
+  text-transform: uppercase;
+  color: var(--text-color);
+}
+
+@media (width < 900px) {
+  .cards-horizontal > div {
+    grid-template-columns: 1fr;
+  }
+}

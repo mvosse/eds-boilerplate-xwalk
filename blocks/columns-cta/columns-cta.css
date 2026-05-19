@@ -1,0 +1,51 @@
+.columns-cta > div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+}
+
+.columns-cta h2 {
+  font-size: var(--heading-font-size-l);
+  font-weight: 700;
+  margin-top: 0;
+  color: inherit;
+}
+
+.columns-cta p {
+  font-size: var(--body-font-size-m);
+  color: inherit;
+}
+
+.columns-cta a.button:any-link {
+  background-color: #fff;
+  color: var(--button-gray);
+  padding: 24px 80px;
+  font-weight: 700;
+  font-size: var(--body-font-size-s);
+  text-transform: none;
+  text-align: center;
+  border: none;
+  white-space: nowrap;
+}
+
+.columns-cta a.button:hover {
+  background-color: #f0f0f0;
+  text-decoration: none;
+}
+
+@media (width >= 900px) {
+  .columns-cta > div {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .columns-cta > div > div:first-child {
+    flex: 1;
+  }
+
+  .columns-cta > div > div:last-child {
+    flex-shrink: 0;
+  }
+}

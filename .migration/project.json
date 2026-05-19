@@ -1,0 +1,11 @@
+{
+  "previewOrg": "mvosse",
+  "previewSite": "eds-boilerplate-xwalk",
+  "type": "xwalk",
+  "libraryUrl": "https://main--sta-xwalk-boilerplate--aemysites.aem.page/tools/sidekick/library.json",
+  "contentHostUrl": "author-p152234-e1877973.adobeaemcloud.com",
+  "aemSitePath": "/content/eds-boilerplate-xwalk",
+  "aemAssetsFolderPath": "/content/dam/eds-boilerplate-xwalk",
+  "aemSiteName": "eds-boilerplate-xwalk",
+  "aemSiteTitle": "EDS Boilerplate XWalk"
+}

@@ -1,0 +1,49 @@
+.columns-video > div {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.columns-video h2 {
+  font-size: var(--heading-font-size-xl);
+  font-weight: 700;
+  margin-top: 0;
+}
+
+.columns-video p {
+  font-size: var(--body-font-size-m);
+  line-height: 1.5;
+  color: var(--text-color);
+}
+
+.columns-video a.button:any-link {
+  font-size: var(--body-font-size-m);
+  font-weight: 800;
+  text-transform: uppercase;
+  color: var(--text-color);
+}
+
+.columns-video > div > div:last-child {
+  aspect-ratio: 16 / 9;
+  background-color: #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.columns-video > div > div:last-child a {
+  color: #fff;
+  font-size: var(--body-font-size-s);
+}
+
+@media (width >= 900px) {
+  .columns-video > div {
+    align-items: center;
+    flex-direction: row;
+    gap: 48px;
+  }
+
+  .columns-video > div > div {
+    flex: 1;
+  }
+}

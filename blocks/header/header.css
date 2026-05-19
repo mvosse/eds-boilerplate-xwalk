@@ -1,9 +1,10 @@
 /* header and nav layout */
 header .nav-wrapper {
-  background-color: var(--background-color);
+  background-color: #f6f8fb;
   width: 100%;
   z-index: 2;
   position: fixed;
+  border-bottom: 1px solid #e0e0e0;
 }
 
 header nav {
@@ -15,7 +16,7 @@ header nav {
   align-items: center;
   gap: 0 24px;
   margin: auto;
-  max-width: 1248px;
+  max-width: var(--content-max-width);
   height: var(--nav-height);
   padding: 0 24px;
   font-family: var(--body-font-family);
@@ -31,15 +32,16 @@ header nav[aria-expanded='true'] {
 }
 
 @media (width >= 900px) {
-  header nav {
-    display: flex;
-    justify-content: space-between;
-    gap: 0 32px;
-    max-width: 1264px;
-    padding: 0 32px;
-  }
-
+  header nav,
   header nav[aria-expanded='true'] {
+    display: grid;
+    grid-template:
+      'brand tools' 56px
+      'sections sections' 56px / auto 1fr;
+    gap: 0;
+    max-width: calc(var(--content-max-width) + 64px);
+    padding: 0 32px;
+    height: auto;
     min-height: 0;
     overflow: visible;
   }
@@ -51,7 +53,13 @@ header nav p {
 }
 
 header nav a:any-link {
-  color: currentcolor;
+  color: var(--text-color);
+  text-decoration: none;
+}
+
+header nav a:hover {
+  color: var(--brand-red);
+  text-decoration: none;
 }
 
 /* hamburger */
@@ -68,11 +76,13 @@ header nav .nav-hamburger button {
   border: 0;
   border-radius: 0;
   padding: 0;
-  background-color: var(--background-color);
+  background-color: transparent;
   color: inherit;
   overflow: initial;
   text-overflow: initial;
   white-space: initial;
+  text-transform: none;
+  font-weight: 400;
 }
 
 header nav .nav-hamburger-icon,
@@ -142,6 +152,19 @@ header .nav-brand {
   font-size: var(--heading-font-size-s);
   font-weight: 700;
   line-height: 1;
+  display: flex;
+  align-items: center;
+}
+
+header nav .nav-brand a:any-link {
+  color: var(--brand-red);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+header nav .nav-brand a:hover {
+  color: var(--brand-red);
 }
 
 header nav .nav-brand img {
@@ -149,7 +172,7 @@ header nav .nav-brand img {
   height: auto;
 }
 
-/* sections */
+/* sections - main navigation items */
 header nav .nav-sections {
   grid-area: sections;
   flex: 1 1 auto;
@@ -170,7 +193,9 @@ header nav .nav-sections ul {
 }
 
 header nav .nav-sections ul > li {
-  font-weight: 500;
+  font-weight: 700;
+  font-size: 16px;
+  color: var(--text-color);
 }
 
 header nav .nav-sections ul > li > ul {
@@ -183,9 +208,13 @@ header nav .nav-sections ul > li > ul > li {
 
 @media (width >= 900px) {
   header nav .nav-sections {
-    display: block;
+    display: flex;
     visibility: visible;
     white-space: nowrap;
+    grid-area: sections;
+    border-top: 1px solid #e0e0e0;
+    align-items: center;
+    justify-content: center;
   }
 
   header nav[aria-expanded='true'] .nav-sections {
@@ -196,6 +225,11 @@ header nav .nav-sections ul > li > ul > li {
     position: relative;
     padding-right: 16px;
     cursor: pointer;
+    transition: color 0.2s;
+  }
+
+  header nav .nav-sections .nav-drop:hover {
+    color: var(--brand-red);
   }
 
   header nav .nav-sections .nav-drop::after {
@@ -220,7 +254,7 @@ header nav .nav-sections ul > li > ul > li {
 
   header nav .nav-sections ul {
     display: flex;
-    gap: 24px;
+    gap: 48px;
     margin: 0;
   }
 
@@ -238,12 +272,14 @@ header nav .nav-sections ul > li > ul > li {
     display: block;
     position: absolute;
     left: -24px;
-    width: 200px;
+    width: 220px;
     top: 150%;
     padding: 16px;
-    background-color: var(--light-color);
+    background-color: #fff;
     white-space: initial;
     z-index: 1;
+    box-shadow: 0 4px 12px rgb(0 0 0 / 10%);
+    border-radius: 4px;
   }
 
   header nav .nav-sections .default-content-wrapper > ul > li > ul::before {
@@ -255,17 +291,65 @@ header nav .nav-sections ul > li > ul > li {
     height: 0;
     border-left: 8px solid transparent;
     border-right: 8px solid transparent;
-    border-bottom: 8px solid var(--light-color);
+    border-bottom: 8px solid #fff;
   }
 
   header nav .nav-sections .default-content-wrapper > ul > li > ul > li {
     padding: 8px 0;
   }
+
+  header nav .nav-sections .default-content-wrapper > ul > li > ul > li a {
+    color: var(--text-color);
+    font-weight: 400;
+  }
+
+  header nav .nav-sections .default-content-wrapper > ul > li > ul > li a:hover {
+    color: var(--brand-red);
+  }
 }
 
-/* tools */
+/* stylelint-disable no-descending-specificity */
+
+/* tools - utility links + sign in */
 header nav .nav-tools {
   grid-area: tools;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 24px;
+}
+
+header nav .nav-tools ul {
+  list-style: none;
+  display: none;
+  margin: 0;
+  padding: 0;
+  gap: 32px;
+  font-size: 14px;
+}
+
+header nav .nav-tools ul li a:any-link {
+  color: var(--text-color);
+  font-weight: 500;
+  font-size: 15px;
+  text-transform: none;
+}
+
+header nav .nav-tools ul li a:hover {
+  color: var(--brand-red);
+}
+
+@media (width >= 900px) {
+  header nav .nav-tools ul {
+    display: flex;
+  }
+}
+
+header nav .nav-tools p a:any-link {
+  color: var(--brand-red);
+  font-weight: 700;
+  font-size: 14px;
+  text-transform: none;
 }
 
 header nav .nav-tools .button {
@@ -280,7 +364,7 @@ header nav .nav-tools .button {
 header .breadcrumbs {
   display: none;
   margin: auto;
-  max-width: 1248px;
+  max-width: calc(var(--content-max-width) + 64px);
   height: var(--breadcrumbs-height);
   padding: 0 24px;
   font-size: var(--body-font-size-xs);
@@ -297,26 +381,24 @@ header .breadcrumbs ol {
   gap: 1ch;
 }
 
-/* stylelint-disable-next-line no-descending-specificity */
-header .breadcrumbs ol li {
+header .breadcrumbs ol > li {
   padding: 0;
   color: var(--dark-color);
 }
 
-header .breadcrumbs ol li:not(:last-child)::after {
+header .breadcrumbs ol > li:not(:last-child)::after {
   content: '/';
   padding-left: 1ch;
 }
 
-/* stylelint-disable-next-line no-descending-specificity */
-header .breadcrumbs ol li[aria-current] {
+header .breadcrumbs ol > li[aria-current] {
   color: var(--text-color);
 }
 
 @media (width >= 900px) {
   header .breadcrumbs {
     display: block;
-    max-width: 1264px;
+    max-width: calc(var(--content-max-width) + 64px);
     padding: 0 32px;
   }
 }
